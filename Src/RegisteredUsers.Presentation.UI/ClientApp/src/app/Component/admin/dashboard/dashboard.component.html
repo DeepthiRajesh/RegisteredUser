@@ -1,0 +1,18 @@
+<table border="1" class=" table table-striped" *ngIf="data" bgcolor="white">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>PhoneNumber</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of data">
+      <td>{{user.firstName}} {{user.middleName}} {{user.lastName}}</td>
+      <td>{{user.email}}</td>
+      <td>{{user.phoneNumber}}</td>
+    </tr>
+  </tbody>
+</table>
+
+{{data | json}}
